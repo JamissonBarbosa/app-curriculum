@@ -2,6 +2,8 @@ import { StyleSheet, Text, View, Image, Alert, TouchableOpacity } from 'react-na
 import Icon from 'react-native-vector-icons/Feather'
 
 
+import Card from './components/Card'
+
 import fotoPerfil from './assets/child.png'  
 
 
@@ -50,29 +52,27 @@ const App = () => {
           </View>
         </View>
 
-        <View style={styles.card}>
-          <View style={styles.cardHeader}>
-            <Text>Formação Acadêmica</Text>
-          </View>
-          <View style={styles.cardContent}>
-            <Text>Descrição das formaçoes academicas</Text>
-            <Text>Descrição das formaçoes academicas</Text>
-            <Text>Descrição das formaçoes academicas</Text>
-            <Text>Descrição das formaçoes academicas</Text>
-          </View>
-          </View>
-          
-          <View style={styles.card}>
-          <View style={styles.cardHeader}>
-            <Text>Experiencias Profissionais</Text>
-          </View>
-          <View style={styles.cardContent}>
-            <Text>Descrição das Experiencias Profissionais</Text>
-            <Text>Descrição das Experiencias Profissionais</Text>
-            <Text>Descrição das Experiencias Profissionais</Text>
-            <Text>Descrição das Experiencias Profissionais</Text>
-          </View>
-        </View>
+          <Card titulo="Formação Acadêmica">
+            <Text style={styles.cardContentText}>Descrição das formaçoes academicas</Text>
+            <Text style={styles.cardContentText}>Descrição das formaçoes academicas</Text>
+            <Text style={styles.cardContentText}>Descrição das formaçoes academicas</Text>
+            <Text style={styles.cardContentText}>Descrição das formaçoes academicas</Text>
+          </Card>
+
+          <Card titulo="Experiências Profissional">
+            <Text style={styles.cardContentText}>Descrição das Experiências  Profissionais</Text>
+            <Text style={styles.cardContentText}>Descrição das Experiências  Profissionais</Text>
+            <Text style={styles.cardContentText}>Descrição das Experiências  Profissionais</Text>
+            <Text style={styles.cardContentText}>Descrição das Experiências  Profissionais</Text>
+          </Card>
+
+          <Card titulo="Experiências Profissional">
+            <Text>Descrição das Experiências  Profissionais</Text>
+            <Text>Descrição das Experiências  Profissionais</Text>
+            <Text>Descrição das Experiências  Profissionais</Text>
+            <Text>Descrição das Experiências  Profissionais</Text>
+          </Card>
+
       </View>
     </>
   );
@@ -110,21 +110,10 @@ const styles = StyleSheet.create({
     width: '60%',
     marginTop: 20
   },
-  card:{
-    marginTop: 20,
-    borderColor: '#939393',
-    borderRadius: 5,
-    borderWidth: 1,
-    padding: 10,
-    backgroundColor: '#FFF'
-  },
-  cardContent:{
-    marginTop: 20
-  },
   cardContentText:{
     marginBottom: 10,
-    color: '#939393'
-  }
+    color: '#414549',
+  } 
 });
 
 export default App;
